@@ -1,16 +1,23 @@
-# Akademi Pengajian Melayu — Digital Experience 2027 · V4
+# Akademi Pengajian Melayu — Digital Experience 2027 · V5
 
 A modern, responsive **unofficial UI/UX redesign concept** for Universiti Malaya's Akademi Pengajian Melayu (APM), made as a personal portfolio study by **Lembayu Studio**.
 
 > **Disclaimer:** This is an independent, unofficial portfolio concept. It is **not** the official APM or Universiti Malaya website and is not affiliated with, approved by, or commissioned by Universiti Malaya.
 
-## Visual direction (V4)
+## V5 design direction: Soft Reset
 
-**Modern academic editorial.** An asymmetric light editorial hero, expressive Cormorant Garamond typography, navy/ivory/sand colour palette, tactile photography, a culture-inspired typographic interlude, redesigned programme cards and understated responsive microinteractions.
+**Return to the original premium academic editorial homepage mockup.**
 
-The hero emblem is an **APM portfolio mark**, not the official UM seal. No official APM/UM website functionality or backend is used.
+The user preferred the original concept over the experimental V2–V4 directions. V5 restores:
+- Full-width, gently overlaid university-campus illustrative hero image
+- Deep navy, warm ivory, white and restrained soft-gold highlights
+- Playfair Display for expressive academic headings, DM Sans for UI and body text
+- Calm spacing, gentle corner radius and subtle visual feedback
+- Original section structure: hero, quick pathways, about, programmes, research, stories, CTA and footer
 
-V4 responds to feedback that V3 felt rigid and visually dated. The new direction uses Manrope, Instrument Serif accents, warm off-white, sage, terracotta, forest green, organic image shapes and less boxed UI. The frontend scope remains unchanged.
+V5 removes ornamental stamps, the extra typographic interlude and competing photography collages. Existing mobile navigation, placeholder links, accessibility basics and frontend-only scope are preserved.
+
+**The hero image is illustrative stock photography, not an official photograph of Universiti Malaya.** This remains an unofficial portfolio concept.
 
 ## Project goals
 
@@ -25,7 +32,7 @@ V4 responds to feedback that V3 felt rigid and visually dated. The new direction
 - CSS3 with design tokens and responsive layouts
 - Bootstrap 5.3 (grid utilities)
 - Vanilla JavaScript (mobile navigation, placeholder link handling, scroll reveal)
-- Google Fonts: Manrope and Instrument Serif (DM Sans and Cormorant Garamond remain in legacy styles)
+- Google Fonts: Playfair Display and DM Sans
 
 No framework build process, server-side logic, database or UM API access is required.
 
@@ -40,8 +47,9 @@ For a local development server, run `python3 -m http.server 8000` and visit `htt
 ```
 ├── index.html   # Full concept homepage
 ├── styles.css   # V1 base layout and component styling
-├── v2.css       # V2/V3 styling retained for reference
-├── v4.css       # V4 contemporary cultural minimalism overrides
+├── v2.css       # Archived V2/V3 visual experiments (not loaded)
+├── v4.css       # Archived V4 art direction (not loaded)
+├── v5.css       # Active V5 visual refinement, loaded after styles.css
 ├── script.js    # Accessible mobile menu, scroll feedback, reduced-motion reveals
 ├── DESIGN_REVIEW.md # V3 findings, rationale, image references and browser QA backlog
 └── README.md    # Scope and setup
@@ -49,7 +57,7 @@ For a local development server, run `python3 -m http.server 8000` and visit `htt
 
 ## Included sections
 
-Asymmetric editorial hero, academic quick access, academy introduction, cultural typography interlude, four undergraduate programme cards, postgraduate callout, research editorial feature, sample stories, final CTA and footer.
+Full-width photographic hero, academic quick access, academy introduction, four undergraduate programme cards, postgraduate callout, research editorial feature, sample stories, final CTA and footer.
 
 All demo CTA/navigation links intentionally point to `#` and their default action is disabled. This is a **front-end only** prototype.
 
@@ -73,4 +81,4 @@ Static hosting such as GitHub Pages is sufficient. Once enabled in GitHub Pages 
 
 ## Portfolio status
 
-**Version 4 — contemporary art-direction reset.** The source was inspected, and image-source licensing for two new visuals was checked. Full live-browser screenshot QA, image-availability checks and formal accessibility conformance testing remain open. Not intended for production deployment or institutional use.
+**Version 5 — mockup-inspired soft reset.** The source was inspected, and image-source licensing for two new visuals was checked. Full live-browser screenshot QA, image-availability checks and formal accessibility conformance testing remain open. Not intended for production deployment or institutional use.

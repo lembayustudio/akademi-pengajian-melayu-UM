@@ -1,0 +1,296 @@
+/*
+ * APM Digital Experience / V5 Soft Reset
+ * Intent: return to the original premium academic editorial mockup.
+ * Load after styles.css only. V2/V4 styles are archived, not loaded.
+ * Original typography, restrained navy / warm ivory / muted gold.
+ */
+:root {
+  --navy: #122d43;
+  --navy-dark: #0d2334;
+  --navy-soft: #23445b;
+  --cream: #f8f7f3;
+  --cream-deep: #f0eee7;
+  --white: #fff;
+  --gold: #c9aa79;
+  --gold-light: #e7ce9f;
+  --ink: #203447;
+  --muted: #596b76;
+  --serif: "Playfair Display", Georgia, serif;
+  --sans: "DM Sans", sans-serif;
+  --ease: cubic-bezier(.22, 1, .36, 1);
+}
+body { background: var(--cream); color:var(--ink); font-size: 15px; line-height: 1.75; }
+.container-xxl { max-width: 1400px; padding-inline: clamp(22px, 4vw, 58px); }
+html { scroll-padding-top: 90px; }
+a { -webkit-tap-highlight-color: transparent; }
+:focus-visible { outline: 3px solid #b88e53; outline-offset: 4px; }
+::selection { background: var(--gold-light); color: var(--navy-dark); }
+
+/* Identity + navigation: straightforward, warm, quiet. */
+.concept-strip { height: 30px; background: #0c2537; font-size: 9px; letter-spacing: .15em; }
+.concept-dot { background: #e5c58d; }
+.site-header {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(250,249,246,.97);
+  box-shadow: 0 1px 0 rgba(18,45,67,.08);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+}
+.site-header.is-scrolled { box-shadow: 0 6px 22px rgba(18,45,67,.08); }
+.nav-shell { height: 90px; }
+.identity { gap: 13px; }
+.identity-seal {
+  width: 52px; height: 52px;
+  border: 1px solid #29485d; border-radius: 50%;
+  color: var(--navy); background: transparent;
+  font-family: var(--serif); font-weight: 600;
+  font-size: 20px; letter-spacing: -.08em;
+}
+.identity-seal span { color: #a87f47; }
+.identity-name { color: var(--navy); font-size: 11px; letter-spacing: .105em; line-height: 1.25; }
+.identity-name small { color:#687b85; letter-spacing: .17em; font-size: 9px; }
+.nav-links { gap: clamp(14px,1.9vw,28px); }
+.nav-links>a:not(.nav-action) { font-size: 12px; color: var(--ink); }
+.nav-links>a:not(.nav-action):hover { color: #906b3f; }
+.nav-action {
+  padding: 15px 19px; border-radius: 4px;
+  background: var(--navy); font-size: 12px;
+}
+.nav-action:hover { background: #284b63; }
+
+/* Full-width photography hero from initial design direction.
+ * Soft layered overlay ensures type clarity without a hard navy wall. */
+.hero { min-height: 690px; background: #1a3345; color: #fff; }
+.hero-picture {
+  background: url("https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=2200&q=82") center 53% / cover no-repeat;
+  transform: scale(1.01);
+}
+.hero-overlay {
+  background:
+    linear-gradient(90deg,rgba(9,32,48,.83) 0%,rgba(12,39,56,.70) 43%,rgba(16,44,57,.20) 100%),
+    linear-gradient(0deg,rgba(10,29,43,.36),transparent 38%);
+}
+.hero-layout { min-height: 690px; padding-top: 116px; padding-bottom: 29px; }
+.hero-content { max-width: 880px; }
+.hero h1 {
+  margin: 0 0 25px;
+  font-family: var(--serif);
+  font-size: clamp(48px,5.25vw,78px);
+  line-height: 1.17; letter-spacing: -.047em;
+  font-weight: 500; text-wrap: balance;
+}
+.hero h1 em { font-weight: 500; color: #e3c99b; }
+.kicker { color: #846238; font-size: 10px; letter-spacing: .19em; }
+.hero .kicker-light,.research .kicker-light,.callout .kicker-light { color: #e9d4ab; }
+.kicker-line { background: #e4c694; }
+.hero-intro { max-width: 540px; font-size: 16px; line-height: 1.88; color: #e9edf0; }
+.hero-buttons { gap: 13px; margin-top: 34px; }
+.button {
+  min-height: 53px; padding: 15px 23px;
+  border-radius: 4px; gap: 32px;
+  font-size: 12px; letter-spacing: .01em;
+}
+.button-gold { background: #d2b27c; color: #152e3f; }
+.button-gold:hover { background: #ebcc95; color: #102b40; }
+.button-ghost { background: transparent; color: #fff; border-color: rgba(255,255,255,.72); }
+.button-ghost:hover { background: #fff; color: #20384d; }
+.button-navy { background: #15354a; }
+.button-navy:hover { background: #30526a; }
+.hero-bottom { color: #efe2c7; font-size: 10px; letter-spacing: .16em; }
+.scroll-indicator { color: #f4efe8; }
+
+/* Small clear navigation shortcuts, not decorative tiles. */
+.quick-access { background: #fff; }
+.quick-grid { grid-template-columns: repeat(3,1fr); }
+.quick-link { min-height: 137px; padding: 25px 25px; gap: 19px; }
+.quick-link:first-child { border-left: 0; }
+.quick-link:last-child { border-right: 0; }
+.quick-link:hover { background: #faf9f6; }
+.quick-count { font-size: 10px; color: #826036; }
+.quick-link strong { font-family: var(--serif); font-weight: 500; font-size: 24px; }
+.quick-link small { font-size: 12px; color: #586b77; line-height: 1.6; }
+.quick-icon { color: #8f6f46; }
+
+/* Consistent section rhythm and editorial headings. */
+.section { padding: clamp(86px, 8.2vw, 124px) 0; }
+.section-title {
+  font-size: clamp(42px, 4.3vw, 64px);
+  font-weight: 500; line-height: 1.2;
+  letter-spacing: -.045em; text-wrap: balance;
+}
+.section-title em { color: #9f7845; font-weight: 500; }
+.section-description { color: #596c76; line-height: 1.95; font-size: 15px; }
+.section-heading { margin-bottom: 42px; }
+.text-action { font-size: 12px; gap: 19px; border-color: #b69462; }
+.text-action:hover { gap: 27px; }
+
+/* Intro — warm photograph, restrained overlapping caption. */
+.about { background: #faf9f6; }
+.about-media { margin-bottom: 22px; }
+.about-media>img { height: 485px; object-fit: cover; border-radius: 10px; }
+.media-label {
+  right: 0; bottom: -20px;
+  min-width: 240px; padding: 23px 28px;
+  background: #193b52; border-radius: 6px 0 8px 6px;
+}
+.media-label span { color: #ebd2a8; font-size: 10px; }
+.media-label strong { font-family: var(--serif); font-size: 22px; font-weight: 500; }
+.about .section-description { max-width: 500px; margin: 28px 0 30px; }
+
+/* Programme overview — keep existing image-led composition, soften edges. */
+.programs { background: #fff; }
+.program-card {
+  height: 400px; border-radius: 10px;
+  box-shadow: 0 6px 24px rgba(20,43,60,.05);
+  overflow: hidden; background: #324a56;
+}
+.program-card img { filter: saturate(.78); }
+.program-card:hover img { transform: scale(1.045); }
+.card-shade {
+  background: linear-gradient(0deg,
+    rgba(11,31,46,.90) 0%,
+    rgba(12,33,47,.46) 38%,
+    rgba(13,33,45,.05) 86%);
+}
+.program-info { bottom: 25px; left: 24px; right: 23px; }
+.program-info small { font-size: 10px; color: #f2d9b4; letter-spacing: .06em; }
+.program-info strong {
+  font-family: var(--serif); font-size: clamp(23px,2vw,28px);
+  line-height: 1.27; letter-spacing: -.025em; font-weight: 500;
+}
+.card-arrow { font-size: 21px; margin-top: 12px; }
+.postgraduate {
+  margin-top: 39px; background: #f3f1ec;
+  border-radius: 9px; padding: 28px 35px;
+}
+.postgraduate-label { color: #80603b; }
+.postgraduate h3 { font-size: 29px; line-height: 1.25; }
+.postgraduate p { color: #5a6c77; }
+
+/* Research and news: layout remains recognisable and calm. */
+.research { min-height: 575px; background: #15364c; }
+.research-photo { background-position: center 48%; }
+.research-panel { background: #15364c; padding: 65px clamp(36px,6vw,90px); }
+.research h2 {
+  font-size: clamp(40px,4vw,60px);
+  font-weight: 500; line-height: 1.2;
+}
+.research h2 em { color: #e2c99f; }
+.research p:not(.kicker) { color: #dce6eb; }
+.research-ornament { display: none; }
+.stories { background: #faf9f6; }
+.story-picture { border-radius: 10px; aspect-ratio: 1.38; }
+.story-picture img { filter: saturate(.82); }
+.story-category { margin: 21px 0 10px; color: #805d35; font-size: 10px; letter-spacing: .11em; }
+.story-card>strong {
+  font-family: var(--serif); font-size: clamp(23px,2.4vw,30px);
+  font-weight: 500; line-height: 1.32; letter-spacing: -.028em;
+}
+.story-more { padding-top: 20px; font-size: 12px; }
+.sample-note { color: #64737d; }
+
+/* Simple closing CTA and footer. */
+.callout { background: #1b3b51; padding: 86px 0; }
+.callout h2 {
+  font-family: var(--serif); font-size: clamp(40px,4.3vw,64px);
+  font-weight: 500; line-height: 1.2;
+}
+.callout h2 em { color: #e7cd9f; }
+.callout .button-gold { color: #17354a; }
+.site-footer { background: #0d2739; }
+.footer-grid { padding-top: 72px; padding-bottom: 62px; }
+.footer-wordmark { font-size: 65px; }
+.footer-wordmark span { color: #d6b782; }
+.footer-columns h3 { color: #e7ce9e; }
+.footer-columns a { color: #d0dce2; }
+.footer-base { color: #adbec9; font-size: 10px; }
+.back-to-top {
+  position: fixed; right: 20px; bottom: 20px; z-index: 70;
+  display: grid; place-items: center;
+  width: 45px; height: 45px; border: 0; border-radius: 50%;
+  background: #d2b27c; color: #163144; font-size: 22px;
+  box-shadow: 0 7px 20px rgba(8,30,44,.17); cursor: pointer;
+  opacity: 0; pointer-events: none; transform: translateY(10px);
+  transition: opacity .2s,transform .2s,background .2s;
+}
+.back-to-top.is-visible { opacity: 1; pointer-events: auto; transform: none; }
+.back-to-top:hover { background: #ebcc95; }
+
+/* Collapse nav before labels can crowd the brand. */
+@media (max-width: 1150px) {
+  .nav-shell { height: 80px; }
+  .menu-toggle { display: block; margin-left: auto; min-width: 44px; min-height: 44px; }
+  .nav-links {
+    position: absolute; top: 100%; left: 0; right: 0;
+    display: none; flex-direction: column; align-items: stretch; gap: 0;
+    background: #faf9f6; padding: 15px max(24px,5vw) 28px;
+    box-shadow: 0 14px 25px rgba(8,30,44,.10);
+    max-height: calc(100dvh - 80px); overflow-y: auto;
+  }
+  .nav-links.is-open { display: flex; }
+  .nav-links>a:not(.nav-action) { font-size: 14px; padding: 14px 0; border-bottom: 1px solid #e7e8e3; }
+  .nav-action { margin-top: 17px; justify-content: center; }
+}
+@media (max-width: 991px) {
+  .hero,.hero-layout { min-height: 665px; }
+  .hero-layout { padding-top: 106px; }
+  .hero h1 { font-size: clamp(45px,6vw,65px); }
+  .hero-overlay {
+    background: linear-gradient(90deg,rgba(9,32,48,.88),rgba(12,39,56,.59) 72%,rgba(16,44,57,.31)),
+      linear-gradient(0deg,rgba(8,30,44,.35),transparent 45%);
+  }
+  .quick-link { padding: 22px 14px; gap: 12px; }
+  .quick-link strong { font-size: 21px; }
+  .program-card { height: 380px; }
+  .research-panel { padding: 60px 38px; }
+  .research h2 { font-size: clamp(38px,4.7vw,50px); }
+}
+@media (max-width: 767px) {
+  .hero,.hero-layout { min-height: 640px; }
+  .hero-layout { padding-top: 88px; padding-bottom: 26px; }
+  .hero h1 { font-size: clamp(43px,7.3vw,58px); max-width: 610px; }
+  .hero-intro { font-size: 15px; }
+  .hero-bottom { font-size: 9px; }
+  .hero-overlay { background: linear-gradient(90deg,rgba(9,32,48,.92),rgba(11,37,53,.62)); }
+  .section { padding-block: 80px; }
+  .section-title { font-size: clamp(41px,7vw,56px); }
+  .section-heading { align-items: flex-start; }
+  .quick-grid { grid-template-columns: 1fr; }
+  .quick-link {
+    min-height: 95px; padding: 17px 5px;
+    border-left: 0; border-right: 0; border-bottom: 1px solid #e7e8e3;
+  }
+  .quick-link strong { font-size: 22px; }
+  .about-media>img { height: 390px; }
+  .media-label { right: 0; }
+  .program-card { height: 390px; }
+  .postgraduate { padding: 26px 25px; gap: 20px; }
+  .postgraduate h3 { font-size: 27px; }
+  .research { grid-template-columns: 1fr; }
+  .research-photo { min-height: 290px; }
+  .research-panel { padding: 65px 28px; }
+  .research h2 { font-size: clamp(40px,6vw,51px); }
+  .story-picture { aspect-ratio: 1.48; }
+  .callout { padding: 70px 0; }
+  .callout h2 { font-size: clamp(40px,7vw,57px); }
+}
+@media (max-width: 430px) {
+  .container-xxl { padding-inline: 20px; }
+  .concept-strip { font-size: 8px; letter-spacing: .075em; }
+  .identity-name { font-size: 10px; }
+  .identity-seal { width: 45px; height: 45px; font-size: 18px; }
+  .hero,.hero-layout { min-height: 650px; }
+  .hero-layout { padding-top: 83px; }
+  .hero h1 { font-size: clamp(39px,10vw,44px); letter-spacing: -.04em; }
+  .hero-buttons { flex-direction: column; align-items: stretch; }
+  .hero-buttons .button { justify-content: space-between; }
+  .hero-intro { font-size: 14px; }
+  .about-media>img { height: 300px; }
+  .media-label { min-width: 0; left: 35px; }
+  .program-card { height: 360px; }
+  .postgraduate .button { justify-content: space-between; }
+  .research h2 { font-size: 42px; }
+  .footer-columns { gap: 33px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .program-card img,.story-picture img,.button,.back-to-top { transition: none !important; }
+}

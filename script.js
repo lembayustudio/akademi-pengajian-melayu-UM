@@ -25,7 +25,7 @@
       if (!navigation.contains(event.target) && !button.contains(event.target)) closeMenu();
     });
     window.addEventListener('resize', () => {
-      if (window.innerWidth > 991) closeMenu();
+      if (window.innerWidth > 1150) closeMenu();
     });
   }
 
@@ -53,7 +53,7 @@
   updateScrollState();
   backToTop?.addEventListener('click', () => {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'instant' : 'smooth' });
+    window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
   });
 
   const targets = document.querySelectorAll('.reveal');

@@ -25,7 +25,7 @@ V4 responds to feedback that V3 felt rigid and visually dated. The new direction
 - CSS3 with design tokens and responsive layouts
 - Bootstrap 5.3 (grid utilities)
 - Vanilla JavaScript (mobile navigation, placeholder link handling, scroll reveal)
-- Google Fonts: DM Sans and Cormorant Garamond
+- Google Fonts: Manrope and Instrument Serif (DM Sans and Cormorant Garamond remain in legacy styles)
 
 No framework build process, server-side logic, database or UM API access is required.
 

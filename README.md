@@ -1,14 +1,16 @@
-# Akademi Pengajian Melayu — Digital Experience 2027 · V3
+# Akademi Pengajian Melayu — Digital Experience 2027 · V4
 
 A modern, responsive **unofficial UI/UX redesign concept** for Universiti Malaya's Akademi Pengajian Melayu (APM), made as a personal portfolio study by **Lembayu Studio**.
 
 > **Disclaimer:** This is an independent, unofficial portfolio concept. It is **not** the official APM or Universiti Malaya website and is not affiliated with, approved by, or commissioned by Universiti Malaya.
 
-## Visual direction (V2 → V3)
+## Visual direction (V4)
 
 **Modern academic editorial.** An asymmetric light editorial hero, expressive Cormorant Garamond typography, navy/ivory/sand colour palette, tactile photography, a culture-inspired typographic interlude, redesigned programme cards and understated responsive microinteractions.
 
 The hero emblem is an **APM portfolio mark**, not the official UM seal. No official APM/UM website functionality or backend is used.
+
+V4 responds to feedback that V3 felt rigid and visually dated. The new direction uses Manrope, Instrument Serif accents, warm off-white, sage, terracotta, forest green, organic image shapes and less boxed UI. The frontend scope remains unchanged.
 
 ## Project goals
 
@@ -38,7 +40,8 @@ For a local development server, run `python3 -m http.server 8000` and visit `htt
 ```
 ├── index.html   # Full concept homepage
 ├── styles.css   # V1 base layout and component styling
-├── v2.css       # V2 editorial art direction and responsive refinements
+├── v2.css       # V2/V3 styling retained for reference
+├── v4.css       # V4 contemporary cultural minimalism overrides
 ├── script.js    # Accessible mobile menu, scroll feedback, reduced-motion reveals
 ├── DESIGN_REVIEW.md # V3 findings, rationale, image references and browser QA backlog
 └── README.md    # Scope and setup
@@ -70,4 +73,4 @@ Static hosting such as GitHub Pages is sufficient. Once enabled in GitHub Pages 
 
 ## Portfolio status
 
-**Version 3 — targeted visual/UX refinement.** The source was inspected, and image-source licensing for two new visuals was checked. Full live-browser screenshot QA, image-availability checks and formal accessibility conformance testing remain open. Not intended for production deployment or institutional use.
+**Version 4 — contemporary art-direction reset.** The source was inspected, and image-source licensing for two new visuals was checked. Full live-browser screenshot QA, image-availability checks and formal accessibility conformance testing remain open. Not intended for production deployment or institutional use.

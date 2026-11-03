@@ -16,7 +16,7 @@
       navigation.classList.toggle('is-open', open);
     });
     document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape') {
+      if (event.key === 'Escape' && button.getAttribute('aria-expanded') === 'true') {
         closeMenu();
         button.focus();
       }
@@ -39,6 +39,21 @@
         navigation.classList.remove('is-open');
       }
     });
+  });
+
+  // V2: restrained feedback for longer editorial pages.
+  const header = document.querySelector('.site-header');
+  const backToTop = document.querySelector('.back-to-top');
+  const updateScrollState = () => {
+    const position = window.scrollY || document.documentElement.scrollTop;
+    header?.classList.toggle('is-scrolled', position > 20);
+    backToTop?.classList.toggle('is-visible', position > 520);
+  };
+  window.addEventListener('scroll', updateScrollState, { passive: true });
+  updateScrollState();
+  backToTop?.addEventListener('click', () => {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'instant' : 'smooth' });
   });
 
   const targets = document.querySelectorAll('.reveal');
